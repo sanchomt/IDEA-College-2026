@@ -168,94 +168,77 @@ const TC={Awareness:'var(--awareness)',Storytelling:'var(--story)','Course Spotl
 const TCB={Awareness:'var(--awareness-bg)',Storytelling:'var(--story-bg)','Course Spotlight':'var(--course-bg)','College Life':'var(--life-bg)'};
 const TCT={Awareness:'var(--awareness-t)',Storytelling:'var(--story-t)','Course Spotlight':'var(--course-t)','College Life':'var(--life-t)'};
 
-// Posts assigned to specific dates (Mon-Fri only), alternating 3-4 per week
-// Week 1 (10 Jun): 3 posts — Mon, Wed, Fri
-// Week 2 (17 Jun): 4 posts — Mon, Tue, Thu, Fri
-// Week 3 (24 Jun): 3 posts — Mon, Wed, Fri
-// Week 4 (01 Jul): 4 posts — Mon, Wed, Thu, Fri
-// Week 5 (08 Jul): 3 posts — Tue, Thu, Fri
-// Week 6 (15 Jul): 4 posts — Mon, Tue, Thu, Fri
-// Week 7 (22 Jul): 3 posts — Mon, Wed, Fri
-// Week 8 (29 Jul): 4 posts — Mon, Tue, Thu, Fri
-// Week 9 (05 Aug): 3 posts — Mon, Wed, Fri
-// Week 10 (12 Aug): 4 posts — Mon, Tue, Thu, Fri
-// Week 11 (19 Aug): 3 posts — Mon, Wed, Fri
-// Week 12 (26 Aug): 4 posts — Mon, Tue, Thu, Fri
-// Week 13 (02 Sep): 3 posts — Mon, Wed, Fri
-// Week 14 (09 Sep): 4 posts — Mon, Tue, Thu, Fri
-// Week 15 (16 Sep): 2 posts — Mon, Wed
-
 const posts=[
-  // W1 — 3 posts
-  {date:'2026-6-10',platforms:['Facebook','Instagram'],theme:'Awareness',title:'Campaign launch — new intake now open',copy:'Bold launch creative. IDEA College 2026 intake is open. Headline + link to all courses.',type:'Graphic + Link'},
-  {date:'2026-6-12',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in AI',copy:'IDEA\'s MSc in Artificial Intelligence. For professionals ready to lead the tech revolution.',type:'Carousel'},
-  {date:'2026-6-12',platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: building careers that matter',copy:'Thought-leadership post. Why professional qualifications in Malta open doors.',type:'Text + Image'},
-  // W2 — 4 posts
-  {date:'2026-6-17',platforms:['Instagram'],theme:'College Life',title:'Welcome to IDEA — campus tour',copy:'Short reel walking through campus spaces, classrooms, common areas.',type:'Reel'},
-  {date:'2026-6-18',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: B.Sc. in Nursing (Top Up) & MSc in Advancing Nursing Science',copy:'Two pathways for nursing professionals. Strong career messaging.',type:'Carousel'},
-  {date:'2026-6-19',platforms:['LinkedIn'],theme:'Awareness',title:'Advance your career in healthcare leadership',copy:'MSc in Healthcare Management and Leadership + MSc in Elderly Care Management.',type:'Text + Image'},
+  // W1 — 3 posts — Mon, Wed, Fri
+  {date:'2026-6-10',platforms:['Facebook','Instagram'],theme:'Awareness',title:'Campaign launch — new intake now open',copy:'Bold launch creative. IDEA College 2026 intake is open. Headline + link to all courses. Energy and momentum.',type:'Graphic + Link'},
+  {date:'2026-6-12',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in AI',copy:'IDEA\'s MSc in Artificial Intelligence. For professionals ready to lead the tech revolution. "Future-proof your career."',type:'Carousel'},
+  {date:'2026-6-12',platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: building careers that matter',copy:'Thought-leadership post. Why professional qualifications in Malta open doors. Introduce the breadth of programmes.',type:'Text + Image'},
+  // W2 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-6-17',platforms:['Instagram'],theme:'College Life',title:'Welcome to IDEA — campus tour',copy:'Short reel walking through campus spaces, classrooms, common areas. First impressions count.',type:'Reel'},
+  {date:'2026-6-18',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: B.Sc. in Nursing (Top Up) & MSc in Advancing Nursing Science',copy:'Two pathways for nursing professionals — topping up your degree or advancing into research.',type:'Carousel'},
+  {date:'2026-6-19',platforms:['LinkedIn'],theme:'Awareness',title:'Advance your career in healthcare leadership',copy:'MSc in Healthcare Management and Leadership + MSc in Elderly Care Management. CTA: download brochure.',type:'Text + Image'},
   {date:'2026-6-20',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Student story: from student nurse to healthcare leader',copy:'A nursing graduate\'s journey with IDEA. Warm tone. Real transformation.',type:'Quote + Image'},
-  // W3 — 3 posts
+  // W3 — 3 posts — Mon, Wed, Fri
   {date:'2026-6-24',platforms:['Instagram'],theme:'College Life',title:'Student life: a week in photos',copy:'Photo dump style post — lectures, breaks, social moments. Authentic and relatable.',type:'Photo Carousel'},
-  {date:'2026-6-25',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Foundation Certificate in Management',copy:'Perfect starting point for those new to business and leadership.',type:'Carousel'},
-  {date:'2026-6-26',platforms:['Facebook','Instagram'],theme:'Awareness',title:'Why study in Malta? 5 reasons',copy:'Study in the EU, English-medium, low cost of living, career networking.',type:'Infographic'},
-  // W4 — 4 posts
-  {date:'2026-7-1',platforms:['Instagram'],theme:'College Life',title:'Meet a classmate — student spotlight',copy:'Quick graphic or reel featuring a current student sharing why they chose IDEA.',type:'Reel / Graphic'},
-  {date:'2026-7-1',platforms:['LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Master in Business Administration',copy:'IDEA\'s MBA — flexible, industry-relevant, Malta-based.',type:'Text + Image'},
-  {date:'2026-7-2',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Why I chose IDEA — student testimonial',copy:'First-person student voice. What made them pick IDEA over other options.',type:'Quote + Image'},
-  {date:'2026-7-3',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in IT Essentials',copy:'Entry point for careers in tech. Show job outcomes in Malta\'s digital sector.',type:'Carousel'},
-  // W5 — 3 posts
+  {date:'2026-6-24',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Foundation Certificate in Management',copy:'Perfect starting point for those new to business and leadership. Accessible entry, strong career foundation.',type:'Carousel'},
+  {date:'2026-6-26',platforms:['Facebook','Instagram'],theme:'College Life',title:'Study tips from IDEA students — part 1',copy:'Peer-to-peer carousel. Current students share their top tips for managing studies, deadlines, and work-life balance.',type:'Carousel'},
+  // W4 — 4 posts — Mon, Tue, Wed, Fri
+  {date:'2026-6-29',platforms:['Instagram'],theme:'College Life',title:'Meet a classmate — student spotlight',copy:'Quick graphic or reel featuring a current student sharing why they chose IDEA and what they\'re studying.',type:'Reel / Graphic'},
+  {date:'2026-6-30',platforms:['LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Master in Business Administration',copy:'IDEA\'s MBA — flexible, industry-relevant, Malta-based. CTA: enquire now.',type:'Text + Image'},
+  {date:'2026-7-1',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Why I chose IDEA — student testimonial',copy:'First-person student voice. What made them pick IDEA over other options. Authentic, unscripted.',type:'Quote + Image'},
+  {date:'2026-7-3',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in IT Essentials',copy:'Entry point for careers in tech. Show job outcomes and growth in Malta\'s digital sector.',type:'Carousel'},
+  // W5 — 3 posts — Tue, Thu, Fri
   {date:'2026-7-7',platforms:['Instagram'],theme:'College Life',title:'Testimonial Tuesday — in their own words',copy:'Short quote graphic from a current student. Personal, honest, no script.',type:'Quote Graphic'},
-  {date:'2026-7-9',platforms:['LinkedIn'],theme:'Awareness',title:'Is an MSc in FinTech right for you?',copy:'IDEA\'s MSc in FinTech — where finance meets innovation.',type:'Text + Image'},
-  {date:'2026-7-10',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'A day in the life — IDEA College student',copy:'Authentic reel-style content. Campus life, study sessions, social moments.',type:'Video / Reel'},
-  // W6 — 4 posts
-  {date:'2026-7-13',platforms:['Instagram'],theme:'College Life',title:'Study spaces at IDEA',copy:'Showcase the study environments — library, group rooms, modern classrooms.',type:'Photo Carousel'},
+  {date:'2026-7-9',platforms:['LinkedIn'],theme:'Awareness',title:'Is an MSc in FinTech right for you?',copy:'IDEA\'s MSc in FinTech — where finance meets innovation. Target finance professionals and tech-curious bankers.',type:'Text + Image'},
+  {date:'2026-7-10',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'A day in the life — IDEA College student',copy:'Authentic reel-style content. Campus life, study sessions, social moments. Real atmosphere, real students.',type:'Video / Reel'},
+  // W6 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-7-13',platforms:['Instagram'],theme:'College Life',title:'Study spaces at IDEA',copy:'Showcase the study environments — library, group rooms, modern classrooms. Aspirational and real.',type:'Photo Carousel'},
   {date:'2026-7-14',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Early Childhood Education and Care + BA in Early Childhood Education',copy:'Two levels. One passion. For educators who want to build a career in early years.',type:'Carousel'},
-  {date:'2026-7-16',platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: accredited qualifications at every career stage',copy:'Explain MQF levels 4–8. Position IDEA for lifelong career development.',type:'Text + Infographic'},
-  {date:'2026-7-17',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in Anti-Money Laundering + Master in AML and Compliance',copy:'Two course levels — entry and advanced. Career-focused copy.',type:'Carousel'},
-  // W7 — 3 posts
+  {date:'2026-7-16',platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: accredited qualifications at every career stage',copy:'Explaining Malta\'s MQF framework. Position IDEA as the institution for lifelong career development.',type:'Text + Infographic'},
+  {date:'2026-7-17',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in Anti-Money Laundering + Master in AML and Compliance',copy:'Two course levels — entry and advanced. Career-focused copy for Malta\'s growing compliance sector.',type:'Carousel'},
+  // W7 — 3 posts — Mon, Wed, Fri
   {date:'2026-7-20',platforms:['Instagram'],theme:'College Life',title:'Testimonial: "IDEA changed my career trajectory"',copy:'Powerful one-liner from an alumni or current student over a striking photo.',type:'Quote Graphic'},
-  {date:'2026-7-22',platforms:['LinkedIn'],theme:'Awareness',title:'Compliance careers are booming — are you ready?',copy:'Target legal, finance and banking professionals.',type:'Text + Image'},
-  {date:'2026-7-24',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Graduate story: a career in compliance',copy:'Alumni profile. From entry-level to senior compliance role.',type:'Quote + Image'},
-  // W8 — 4 posts
-  {date:'2026-7-27',platforms:['Instagram'],theme:'College Life',title:'Friday feeling — college life moments',copy:'Casual end-of-week content. Students unwinding, group study sessions.',type:'Photo Story'},
+  {date:'2026-7-22',platforms:['LinkedIn'],theme:'Awareness',title:'Compliance careers are booming — are you ready?',copy:'Target legal, finance and banking professionals. Promote the AML and Compliance pathway.',type:'Text + Image'},
+  {date:'2026-7-24',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Graduate story: a career in compliance',copy:'Alumni profile. From entry-level to senior compliance role. Authentic, aspirational.',type:'Quote + Image'},
+  // W8 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-7-27',platforms:['Instagram'],theme:'College Life',title:'Research highlight: a student\'s thesis journey',copy:'Feature a past student\'s research project or thesis. What they investigated, what they found, where it took them.',type:'Infographic / Graphic'},
   {date:'2026-7-28',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Construction Management + UG Diploma in Quantity Surveying + UG Certificate in Site Management',copy:'Malta\'s construction sector is booming. Three pathways from site to boardroom.',type:'Carousel'},
-  {date:'2026-7-30',platforms:['LinkedIn'],theme:'Awareness',title:'Lead Malta\'s construction boom — MSc in Construction Management',copy:'Target project managers, site supervisors, and QS professionals.',type:'Text + Image'},
-  {date:'2026-7-31',platforms:['Facebook','Instagram'],theme:'Awareness',title:'Did you know? IDEA College offers 25+ courses across 12 industries',copy:'Brand awareness post. Show breadth. "Find your direction."',type:'Brand Graphic'},
-  // W9 — 3 posts
+  {date:'2026-7-30',platforms:['LinkedIn'],theme:'Awareness',title:'Lead Malta\'s construction boom — MSc in Construction Management',copy:'Target project managers, site supervisors, and QS professionals. Professional tone.',type:'Text + Image'},
+  {date:'2026-7-31',platforms:['Facebook','Instagram'],theme:'Awareness',title:'IDEA College — more ways to study than you think',copy:'Generic brand awareness post. Highlight the breadth of programmes, levels, and industries without specific numbers.',type:'Brand Graphic'},
+  // W9 — 3 posts — Mon, Wed, Fri
   {date:'2026-8-3',platforms:['Instagram'],theme:'College Life',title:'Testimonial Tuesday — community at IDEA',copy:'Student quote on the community and friendships built at IDEA.',type:'Quote Graphic'},
-  {date:'2026-8-5',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in Educational Leadership + MSc in Public Health',copy:'For professionals in education and public health who want to lead change.',type:'Carousel'},
-  {date:'2026-8-7',platforms:['LinkedIn'],theme:'Awareness',title:'Leading the future of education — MSc in Educational Leadership and Innovation',copy:'Target school leaders and heads of department.',type:'Text + Image'},
-  // W10 — 4 posts
-  {date:'2026-8-10',platforms:['Instagram'],theme:'College Life',title:'Student study tips — from IDEA students',copy:'Carousel of study tips shared by current students. Peer-to-peer tone.',type:'Carousel'},
-  {date:'2026-8-11',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Behind the lectures — meet the IDEA College faculty',copy:'Short faculty spotlight. A lecturer shares their expertise and passion.',type:'Video / Reel'},
-  {date:'2026-8-13',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Air Transport Management',copy:'Unique to Malta. "Take your career to new heights."',type:'Carousel'},
-  {date:'2026-8-14',platforms:['LinkedIn'],theme:'Awareness',title:'Malta as a hub for international study',copy:'EU membership, English language, growing industries.',type:'Text + Image'},
-  // W11 — 3 posts
-  {date:'2026-8-17',platforms:['Instagram'],theme:'College Life',title:'College life: group project moments',copy:'Behind-the-scenes of group work and collaborative learning.',type:'Photo Carousel'},
+  {date:'2026-8-5',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in Educational Leadership + MSc in Public Health',copy:'For professionals in education and public health who want to lead change at a systemic level.',type:'Carousel'},
+  {date:'2026-8-7',platforms:['LinkedIn'],theme:'Awareness',title:'Leading the future of education — MSc in Educational Leadership and Innovation',copy:'Target school leaders, heads of department, and education managers.',type:'Text + Image'},
+  // W10 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-8-10',platforms:['Instagram'],theme:'College Life',title:'Study tips from IDEA students — part 2',copy:'Second instalment of peer study tips. Focus on research skills, writing, and staying motivated.',type:'Carousel'},
+  {date:'2026-8-11',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Behind the lectures — meet the IDEA College faculty',copy:'Short faculty spotlight. A lecturer shares their expertise, research interests, and passion for their field.',type:'Video / Reel'},
+  {date:'2026-8-13',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Air Transport Management',copy:'Unique to Malta. For aviation professionals and those targeting careers in air transport.',type:'Carousel'},
+  {date:'2026-8-14',platforms:['LinkedIn'],theme:'Awareness',title:'Why professional education matters at every career stage',copy:'Thought-leadership post. The value of continuing education for working professionals in a changing job market.',type:'Text + Image'},
+  // W11 — 3 posts — Mon, Wed, Fri
+  {date:'2026-8-17',platforms:['Instagram'],theme:'College Life',title:'College life: group project moments',copy:'Behind-the-scenes of group work and collaborative learning. Human, warm, and fun.',type:'Photo Carousel'},
   {date:'2026-8-19',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Throwback — grad day memories',copy:'Throwback post featuring photos from past graduations. Celebrate the community and inspire prospective students.',type:'Photo Story'},
   {date:'2026-8-21',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in Business of Fashion',copy:'For fashion professionals ready to lead. Business strategy meets creative industry.',type:'Carousel'},
-  // W12 — 4 posts
-  {date:'2026-8-24',platforms:['Instagram'],theme:'College Life',title:'Testimonial: "I found my people at IDEA"',copy:'Community-focused testimonial. The social and professional network IDEA provides.',type:'Quote Graphic'},
-  {date:'2026-8-25',platforms:['LinkedIn'],theme:'Awareness',title:'Doctorate in Business Administration — April intake open',copy:'DBA for experienced professionals who want to lead with research.',type:'Text + Image'},
-  {date:'2026-8-27',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Project Management',copy:'In-demand qualification across every sector.',type:'Carousel'},
-  {date:'2026-8-28',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Student story: juggling work and an MSc',copy:'How a student balanced a full-time job with their MSc at IDEA.',type:'Quote + Image'},
-  // W13 — 3 posts
-  {date:'2026-9-2',platforms:['Instagram'],theme:'College Life',title:'Student spotlight: international student life in Malta',copy:'Feature an international student. Their experience of studying and living in Malta.',type:'Reel / Quote'},
-  {date:'2026-9-2',platforms:['Facebook','Instagram'],theme:'Awareness',title:'International students — your IDEA College guide',copy:'Admission process, English requirements, student visa, life in Malta.',type:'Infographic'},
+  // W12 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-8-24',platforms:['Instagram'],theme:'College Life',title:'Research highlight: tackling real-world problems',copy:'Showcase a past student\'s applied research project. What problem they explored and how their findings made an impact.',type:'Graphic'},
+  {date:'2026-8-25',platforms:['LinkedIn'],theme:'Awareness',title:'Doctorate in Business Administration — April intake open',copy:'DBA for experienced professionals who want to lead with research. Rigorous, applied, career-defining.',type:'Text + Image'},
+  {date:'2026-8-27',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Project Management',copy:'In-demand qualification across every sector. For professionals who deliver results.',type:'Carousel'},
+  {date:'2026-8-28',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Student story: juggling work and an MSc',copy:'How a student balanced a full-time job with their MSc at IDEA. Relatable for working professionals.',type:'Quote + Image'},
+  // W13 — 3 posts — Mon, Wed, Fri
+  {date:'2026-9-2',platforms:['Instagram'],theme:'College Life',title:'Student spotlight: life at IDEA College',copy:'Feature a current student — their background, why they chose IDEA, and what they\'re enjoying most about the experience.',type:'Reel / Quote'},
+  {date:'2026-9-2',platforms:['Facebook','Instagram'],theme:'Awareness',title:'Studying in Malta — what to expect',copy:'A single, welcoming post for prospective students exploring Malta as a study destination. Warm, informative, no fluff.',type:'Infographic'},
   {date:'2026-9-4',platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: Doctorate in Health Science',copy:'For senior practitioners and researchers. Ambition, authority, impact.',type:'Carousel'},
-  // W14 — 4 posts
-  {date:'2026-9-7',platforms:['Instagram'],theme:'College Life',title:'Testimonial: "Best decision I ever made"',copy:'Short, punchy student testimonial. Real words, real impact.',type:'Quote Graphic'},
-  {date:'2026-9-8',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: UG Higher Diploma for Care Practitioners + MSc in Elderly Care Management',copy:'Two levels of care education. Growing sector, meaningful careers.',type:'Carousel'},
-  {date:'2026-9-10',platforms:['LinkedIn'],theme:'Awareness',title:'Care sector careers — from practitioner to manager',copy:'Show the pathway for care home managers and senior carers.',type:'Text + Image'},
-  {date:'2026-9-11',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Campus life — community and connection at IDEA',copy:'UGC-style lifestyle content. Students studying together, events, social spaces.',type:'Reel / Story'},
-  // W15 — 3 posts
-  {date:'2026-9-14',platforms:['Instagram'],theme:'College Life',title:'Student voices: what would you tell your past self?',copy:'Reflective quotes from alumni and current students. Emotional, inspiring.',type:'Quote Carousel'},
-  {date:'2026-9-16',platforms:['Facebook','Instagram','LinkedIn'],theme:'Storytelling',title:'Looking back — stories from the campaign',copy:'A roundup of student stories, moments, and milestones.',type:'Photo Story'},
-  {date:'2026-9-17',platforms:['Facebook','Instagram','LinkedIn'],theme:'Awareness',title:'Next intake — register your interest',copy:'Bridge post. Campaign ends, pipeline continues. CTA to enquiry form.',type:'Graphic + Link'},
+  // W14 — 4 posts — Mon, Tue, Thu, Fri
+  {date:'2026-9-7',platforms:['Instagram'],theme:'College Life',title:'Research highlight: from classroom to published work',copy:'Highlight a student whose thesis or research led to published work, a conference, or real-world application.',type:'Quote Graphic'},
+  {date:'2026-9-8',platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: UG Higher Diploma for Care Practitioners + MSc in Elderly Care Management',copy:'Two levels of care education. For carers and care managers. Growing sector, meaningful careers.',type:'Carousel'},
+  {date:'2026-9-10',platforms:['LinkedIn'],theme:'Awareness',title:'Care sector careers — from practitioner to manager',copy:'Show the career pathway for care home managers and senior carers.',type:'Text + Image'},
+  {date:'2026-9-11',platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Campus life — community and connection at IDEA',copy:'UGC-style lifestyle content. Students studying together, social spaces, real college atmosphere.',type:'Reel / Story'},
+  // W15 — 3 posts — Mon, Wed, Fri
+  {date:'2026-9-14',platforms:['Instagram'],theme:'College Life',title:'Student voices: what would you tell your past self?',copy:'Reflective quotes from alumni and current students. Emotional, inspiring, shareable.',type:'Quote Carousel'},
+  {date:'2026-9-16',platforms:['Facebook','Instagram','LinkedIn'],theme:'Storytelling',title:'Looking back — stories from the campaign',copy:'A roundup of student stories, moments, and milestones from across the 100 days.',type:'Photo Story'},
+  {date:'2026-9-17',platforms:['Facebook','Instagram','LinkedIn'],theme:'Awareness',title:'IDEA College — your next chapter starts here',copy:'Closing brand moment. Warm, forward-looking. Invite prospective students to explore and get in touch.',type:'Brand Graphic'},
 ].map((p,i)=>{
-  const parts=p.date.split('-');
-  return {...p,id:i,currentDate:new Date(parseInt(parts[0]),parseInt(parts[1])-1,parseInt(parts[2]))};
+  const pts=p.date.split('-');
+  return {...p,id:i,currentDate:new Date(parseInt(pts[0]),parseInt(pts[1])-1,parseInt(pts[2]))};
 });
 
 let activeFilter='all';
