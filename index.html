@@ -8,7 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --purple:#6B4FE0;--purple-light:#EDE9FF;--purple-mid:#A991F5;
+  --purple:#6B4FE0;--purple-mid:#A991F5;
   --navy:#0F0E1A;--text:#1a1a2e;--muted:#6b6880;--border:#e8e5f0;--bg:#f9f8fc;--white:#ffffff;
   --fb:#1877F2;--fb-bg:#EBF3FF;--ig:#C13584;--ig-bg:#FCEEF8;--li:#0A66C2;--li-bg:#E8F3FB;
   --awareness:#7F77DD;--awareness-bg:#EEEDFE;--awareness-t:#3C3489;
@@ -19,8 +19,8 @@
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
 
-.header{background:var(--navy);padding:2.5rem 2rem 1.75rem;border-bottom:1px solid rgba(255,255,255,0.07)}
-.header-inner{max-width:980px;margin:0 auto}
+.header{background:var(--navy);padding:2.5rem 2rem 1.75rem}
+.header-inner{max-width:1100px;margin:0 auto}
 .header-top{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.5rem}
 .brand{font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.12em;color:var(--purple-mid);text-transform:uppercase;margin-bottom:4px}
 .header h1{font-size:22px;font-weight:600;color:#fff}
@@ -30,7 +30,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);lin
 .stat-l{font-size:11px;color:rgba(255,255,255,.38);margin-top:2px;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em}
 
 .controls{background:var(--white);border-bottom:1px solid var(--border);padding:.75rem 2rem;position:sticky;top:0;z-index:100}
-.controls-inner{max-width:980px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.controls-inner{max-width:1100px;margin:0 auto;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .view-toggle{display:flex;gap:3px;background:#f4f2fb;padding:3px;border-radius:8px;flex-shrink:0}
 .vbtn{font-size:12px;padding:5px 12px;border-radius:6px;border:none;background:transparent;color:var(--muted);cursor:pointer;font-family:'DM Sans',sans-serif;display:flex;align-items:center;gap:5px}
 .vbtn.active{background:var(--white);color:var(--text);font-weight:500;box-shadow:0 1px 3px rgba(0,0,0,.08)}
@@ -40,12 +40,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);lin
 .pill:hover{border-color:var(--purple);color:var(--purple)}
 .pill.active{background:var(--purple);border-color:var(--purple);color:#fff;font-weight:500}
 
-.main{max-width:980px;margin:0 auto;padding:1.75rem 2rem}
+.main{max-width:1100px;margin:0 auto;padding:1.75rem 2rem}
 .legend{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:1.5rem}
 .leg{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted)}
 .dot{width:8px;height:8px;border-radius:50%}
 
-/* WEEK VIEW */
+/* WEEK LIST VIEW */
 .week{margin-bottom:.75rem;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--white)}
 .whdr{padding:.7rem 1.25rem;background:#f9f7fe;display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none}
 .whdr:hover{background:#f0ecfc}
@@ -56,7 +56,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);lin
 .chev.open{transform:rotate(180deg)}
 .wposts{display:none}
 .wposts.open{display:block}
-.prow{display:grid;grid-template-columns:76px 72px 1fr 96px;gap:12px;align-items:start;padding:.75rem 1.25rem;border-top:1px solid var(--border);transition:background .1s}
+.prow{display:grid;grid-template-columns:76px 72px 1fr 96px;gap:12px;align-items:start;padding:.75rem 1.25rem;border-top:1px solid var(--border)}
 .prow:hover{background:var(--bg)}
 .dcell{font-size:11px;color:var(--muted);line-height:1.5;font-family:'DM Mono',monospace}
 .plats{display:flex;flex-direction:column;gap:3px}
@@ -76,32 +76,36 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);lin
 .cal-nav button:hover{background:var(--bg)}
 .cal-month{font-size:16px;font-weight:600;color:var(--text);min-width:170px;text-align:center}
 .drag-hint{font-size:11px;color:var(--muted);margin-left:auto;font-style:italic}
-.cgrid{border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--white);width:100%}
-.cdow{display:grid;grid-template-columns:repeat(5,1fr);background:#f9f7fe;border-bottom:1px solid var(--border)}
-.cdow-cell{padding:.5rem;text-align:center;font-size:11px;font-weight:600;color:var(--muted);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em}
-.cdays{display:grid;grid-template-columns:repeat(5,1fr)}
-.ccell{min-height:90px;padding:6px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);vertical-align:top;transition:background .15s}
-.ccell:nth-child(5n){border-right:none}
-.ccell.drag-over{background:#f0ecfc;border-color:var(--purple)}
-.cnum{font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:500;width:20px;height:20px;display:flex;align-items:center;justify-content:center;border-radius:50%}
+
+/* 5-column grid strictly Mon-Fri */
+.cal-table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:12px;overflow:hidden;background:var(--white);table-layout:fixed}
+.cal-table th{padding:.6rem .5rem;text-align:center;font-size:11px;font-weight:600;color:var(--muted);font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.05em;background:#f9f7fe;border-bottom:1px solid var(--border);width:20%}
+.cal-table td{width:20%;vertical-align:top;padding:6px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);min-height:90px;height:90px}
+.cal-table td:last-child{border-right:none}
+.cal-table tr:last-child td{border-bottom:none}
+.cal-table td.out{background:#fbfaf9;opacity:.45}
+.cal-table td.drag-over{background:#f0ecfc;}
+.cnum{font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:500;width:22px;height:22px;display:flex;align-items:center;justify-content:center;border-radius:50%}
 .cnum.today{background:var(--purple);color:#fff}
 .cnum.active-day{color:var(--text);font-weight:600}
-.cpill{font-size:10px;padding:3px 6px;border-radius:4px;margin-bottom:3px;cursor:grab;line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:100%;transition:opacity .15s;user-select:none;border:1px solid transparent}
-.cpill:hover{opacity:.85}
-.cpill.dragging{opacity:.4;cursor:grabbing}
-.ccell.out{background:#fbfaf9;opacity:.4}
+.cpill{font-size:10px;padding:3px 6px;border-radius:4px;margin-bottom:3px;cursor:grab;line-height:1.3;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;max-width:100%;user-select:none;display:block}
+.cpill:hover{opacity:.8}
+.cpill.dragging{opacity:.35;cursor:grabbing}
+
 .cdetail{margin-top:1rem;border:1px solid var(--border);border-radius:12px;padding:1.25rem;background:var(--white);display:none}
 .cdetail.show{display:block}
 .cdetail-date{font-size:14px;font-weight:600;color:var(--text);margin-bottom:1rem;padding-bottom:.75rem;border-bottom:1px solid var(--border)}
 .cpost{padding:.75rem 0;border-top:1px solid var(--border)}
 .cpost:first-of-type{border-top:none;padding-top:0}
 
-@media(max-width:640px){
+@media(max-width:700px){
   .prow{grid-template-columns:60px 1fr}
   .plats,.ttag{display:none}
   .main{padding:1rem}
   .controls{padding:.75rem 1rem}
   .header{padding:1.5rem 1rem 1.25rem}
+  .cal-table th,.cal-table td{padding:3px}
+  .cpill{font-size:9px}
 }
 </style>
 </head>
@@ -166,47 +170,42 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);lin
       <button onclick="nextMonth()">Next &#8594;</button>
       <span class="drag-hint">Drag posts to reschedule</span>
     </div>
-    <div class="cgrid">
-      <div class="cdow">
-        <div class="cdow-cell">Mon</div>
-        <div class="cdow-cell">Tue</div>
-        <div class="cdow-cell">Wed</div>
-        <div class="cdow-cell">Thu</div>
-        <div class="cdow-cell">Fri</div>
-      </div>
-      <div class="cdays" id="cal-days"></div>
-    </div>
+    <table class="cal-table" id="cal-table">
+      <thead>
+        <tr>
+          <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th>
+        </tr>
+      </thead>
+      <tbody id="cal-body"></tbody>
+    </table>
     <div class="cdetail" id="cal-detail"></div>
   </div>
 </div>
 
 <script>
-const START = new Date('2026-06-10');
-const DAYS = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-const MONTHS = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const MS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
-
+const START=new Date('2026-06-10');
+const DAYS=['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+const MS=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
 function addDays(d,n){let r=new Date(d);r.setDate(r.getDate()+n);return r}
 function fmt(d){return DAYS[d.getDay()]+' '+d.getDate()+' '+MS[d.getMonth()]}
+function dateKey(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate()}
 function toWeekday(d){
-  // Move weekend dates to Friday
   const day=d.getDay();
-  if(day===6){return addDays(d,-1);}
-  if(day===0){return addDays(d,-2);}
+  if(day===6)return addDays(d,-1);
+  if(day===0)return addDays(d,-2);
   return d;
 }
-function dateKey(d){return d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();}
 
 const TC={Awareness:'var(--awareness)',Storytelling:'var(--story)','Course Spotlight':'var(--course)','College Life':'var(--life)'};
 const TCB={Awareness:'var(--awareness-bg)',Storytelling:'var(--story-bg)','Course Spotlight':'var(--course-bg)','College Life':'var(--life-bg)'};
 const TCT={Awareness:'var(--awareness-t)',Storytelling:'var(--story-t)','Course Spotlight':'var(--course-t)','College Life':'var(--life-t)'};
 
-// Posts with absolute dates computed and snapped to weekdays
 const rawPosts=[
-  {day:0,platforms:['Facebook','Instagram'],theme:'Awareness',title:'Campaign launch — new intake now open',copy:'Bold launch creative. IDEA College 2026 intake is open. Headline + link to all courses. Energy and momentum.',type:'Graphic + Link'},
-  {day:1,platforms:['Instagram'],theme:'College Life',title:'Welcome to IDEA — campus tour',copy:'Short reel walking through campus spaces, classrooms, common areas. First impressions count.',type:'Reel'},
+  {day:0,platforms:['Facebook','Instagram'],theme:'Awareness',title:'Campaign launch — new intake now open',copy:'Bold launch creative. IDEA College 2026 intake is open. Headline + link to all courses.',type:'Graphic + Link'},
+  {day:1,platforms:['Instagram'],theme:'College Life',title:'Welcome to IDEA — campus tour',copy:'Short reel walking through campus spaces, classrooms, common areas.',type:'Reel'},
   {day:2,platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: building careers that matter',copy:'Thought-leadership post. Why professional qualifications in Malta open doors.',type:'Text + Image'},
-  {day:4,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in AI',copy:'Introducing IDEA\'s MSc in Artificial Intelligence. For professionals ready to lead the tech revolution.',type:'Carousel'},
+  {day:4,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in AI',copy:'IDEA\'s MSc in Artificial Intelligence. For professionals ready to lead the tech revolution.',type:'Carousel'},
   {day:7,platforms:['Instagram'],theme:'College Life',title:'Student life: a week in photos',copy:'Photo dump style post — lectures, breaks, social moments. Authentic and relatable.',type:'Photo Carousel'},
   {day:8,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: B.Sc. in Nursing (Top Up) & MSc in Advancing Nursing Science',copy:'Two pathways for nursing professionals. Strong career messaging.',type:'Carousel'},
   {day:10,platforms:['LinkedIn'],theme:'Awareness',title:'Advance your career in healthcare leadership',copy:'Highlight MSc in Healthcare Management and Leadership + MSc in Elderly Care Management.',type:'Text + Image'},
@@ -216,18 +215,18 @@ const rawPosts=[
   {day:17,platforms:['LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Master in Business Administration',copy:'IDEA\'s MBA — flexible, industry-relevant, Malta-based.',type:'Text + Image'},
   {day:18,platforms:['Facebook','Instagram'],theme:'Awareness',title:'Why study in Malta? 5 reasons',copy:'Study in the EU, English-medium, low cost of living, career networking.',type:'Infographic'},
   {day:21,platforms:['Instagram'],theme:'College Life',title:'Testimonial Tuesday — in their own words',copy:'Short quote graphic from a current student. Personal, honest, no script.',type:'Quote Graphic'},
-  {day:22,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in IT Essentials',copy:'Entry point for careers in tech. Show job outcomes and growth in Malta\'s digital sector.',type:'Carousel'},
+  {day:22,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in IT Essentials',copy:'Entry point for careers in tech. Show job outcomes in Malta\'s digital sector.',type:'Carousel'},
   {day:24,platforms:['LinkedIn'],theme:'Awareness',title:'Is an MSc in FinTech right for you?',copy:'IDEA\'s MSc in FinTech — where finance meets innovation.',type:'Text + Image'},
   {day:25,platforms:['Facebook','Instagram'],theme:'Storytelling',title:'A day in the life — IDEA College student',copy:'Authentic reel-style content. Campus life, study sessions, social moments.',type:'Video / Reel'},
   {day:28,platforms:['Instagram'],theme:'College Life',title:'Study spaces at IDEA',copy:'Showcase the study environments — library, group rooms, modern classrooms.',type:'Photo Carousel'},
   {day:29,platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: Early Childhood Education and Care + BA in Early Childhood Education',copy:'Two levels. One passion. For educators who want to build a career in early years.',type:'Carousel'},
-  {day:31,platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: accredited qualifications at every career stage',copy:'Explain MQF levels 4–8. Position IDEA as the institution for lifelong career development.',type:'Text + Infographic'},
+  {day:31,platforms:['LinkedIn'],theme:'Awareness',title:'IDEA College: accredited qualifications at every career stage',copy:'Explain MQF levels 4–8. Position IDEA for lifelong career development.',type:'Text + Infographic'},
   {day:32,platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Why I chose IDEA — student testimonial',copy:'First-person student voice. What made them pick IDEA over other options.',type:'Quote + Image'},
   {day:35,platforms:['Instagram'],theme:'College Life',title:'Testimonial: "IDEA changed my career trajectory"',copy:'Powerful one-liner from an alumni or current student over a striking photo.',type:'Quote Graphic'},
   {day:36,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: UG Diploma in Anti-Money Laundering + Master in AML and Compliance',copy:'Two course levels — entry and advanced. Career-focused copy.',type:'Carousel'},
   {day:38,platforms:['LinkedIn'],theme:'Awareness',title:'Compliance careers are booming — are you ready?',copy:'Target legal, finance and banking professionals.',type:'Text + Image'},
   {day:39,platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Graduate story: a career in compliance',copy:'Alumni profile. From entry-level to senior compliance role.',type:'Quote + Image'},
-  {day:42,platforms:['Instagram'],theme:'College Life',title:'Friday feeling — college life moments',copy:'Casual end-of-week content. Students unwinding, group study sessions, social spaces.',type:'Photo Story'},
+  {day:42,platforms:['Instagram'],theme:'College Life',title:'Friday feeling — college life moments',copy:'Casual end-of-week content. Students unwinding, group study sessions.',type:'Photo Story'},
   {day:43,platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Construction Management + UG Diploma in Quantity Surveying + UG Certificate in Site Management',copy:'Malta\'s construction sector is booming. Three pathways from site to boardroom.',type:'Carousel'},
   {day:45,platforms:['LinkedIn'],theme:'Awareness',title:'Lead Malta\'s construction boom — MSc in Construction Management',copy:'Target project managers, site supervisors, and QS professionals.',type:'Text + Image'},
   {day:46,platforms:['Facebook','Instagram'],theme:'Awareness',title:'Did you know? IDEA College offers 25+ courses across 12 industries',copy:'Brand awareness post. Show breadth. "Find your direction."',type:'Brand Graphic'},
@@ -239,7 +238,7 @@ const rawPosts=[
   {day:57,platforms:['Facebook','Instagram','LinkedIn'],theme:'Course Spotlight',title:'Spotlight: MSc in Air Transport Management',copy:'Unique to Malta. "Take your career to new heights."',type:'Carousel'},
   {day:59,platforms:['LinkedIn'],theme:'Awareness',title:'Malta as a hub for international study',copy:'EU membership, English language, growing industries.',type:'Text + Image'},
   {day:60,platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Throwback — grad day memories',copy:'Throwback post. Upload photos from past graduations. Celebrate the community and inspire prospective students.',type:'Photo Story'},
-  {day:63,platforms:['Instagram'],theme:'College Life',title:'College life: group project moments',copy:'Behind-the-scenes of group work and collaborative learning. Human and fun.',type:'Photo Carousel'},
+  {day:63,platforms:['Instagram'],theme:'College Life',title:'College life: group project moments',copy:'Behind-the-scenes of group work and collaborative learning.',type:'Photo Carousel'},
   {day:64,platforms:['Facebook','Instagram'],theme:'Course Spotlight',title:'Spotlight: MSc in Business of Fashion',copy:'For fashion professionals ready to lead. Business strategy meets creative industry.',type:'Carousel'},
   {day:66,platforms:['LinkedIn'],theme:'Awareness',title:'Doctorate in Business Administration — April intake open',copy:'DBA for experienced professionals who want to lead with research.',type:'Text + Image'},
   {day:67,platforms:['Facebook','Instagram'],theme:'Storytelling',title:'Student story: juggling work and an MSc',copy:'How a student balanced a full-time job with their MSc at IDEA.',type:'Quote + Image'},
@@ -260,16 +259,14 @@ const rawPosts=[
   {day:95,platforms:['Facebook','Instagram','LinkedIn'],theme:'Awareness',title:'Next intake — register your interest',copy:'Bridge post. Campaign ends, pipeline continues. CTA to enquiry form.',type:'Graphic + Link'},
 ];
 
-// Snap all posts to weekdays and store with mutable date offsets
-let posts = rawPosts.map((p,i) => {
-  let d = addDays(START, p.day);
-  d = toWeekday(d);
-  return {...p, id: i, currentDate: new Date(d)};
+let posts=rawPosts.map((p,i)=>{
+  let d=toWeekday(addDays(START,p.day));
+  return {...p,id:i,currentDate:new Date(d)};
 });
 
 let activeFilter='all';
 let currentView='week';
-let calYear=2026, calMonth=5;
+let calYear=2026,calMonth=5;
 let dragPostId=null;
 
 function getFiltered(){
@@ -308,11 +305,10 @@ function renderWeek(){
     const w=weeks[wk];
     const fri=addDays(w.mon,4);
     const isOpen=wi<2;
-    const wNum=wi+1;
     const wb=document.createElement('div');
     wb.className='week';
     wb.innerHTML=`<div class="whdr" onclick="toggleW(this)">
-      <div><span class="wname">Week ${wNum}</span><span class="wrange">${fmt(w.mon)} – ${fmt(fri)}</span></div>
+      <div><span class="wname">Week ${wi+1}</span><span class="wrange">${fmt(w.mon)} – ${fmt(fri)}</span></div>
       <div class="wcnt">${w.posts.length} post${w.posts.length>1?'s':''}
         <svg class="chev${isOpen?' open':''}" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
@@ -342,102 +338,79 @@ function renderCal(){
   const fp=getFiltered();
   document.getElementById('s-total').textContent=fp.length;
   document.getElementById('cal-label').textContent=MONTHS[calMonth]+' '+calYear;
+
   const byDate={};
   fp.forEach(p=>{
     const k=dateKey(p.currentDate);
     if(!byDate[k])byDate[k]=[];
     byDate[k].push(p);
   });
-  const grid=document.getElementById('cal-days');
-  grid.innerHTML='';
-  const first=new Date(calYear,calMonth,1);
-  // Mon=0...Fri=4, skip weekends entirely
-  // Find first Monday on or before first of month
-  let startDow=first.getDay(); // 0=Sun,1=Mon,...
-  // offset from Monday: Mon=0,Tue=1,...,Fri=4,Sat=5,Sun=6
-  let offset=(startDow+6)%7; // Mon offset
-  if(offset>4) offset=0; // if month starts on weekend, start from Monday of that week
-  const dim=new Date(calYear,calMonth+1,0).getDate();
+
+  const tbody=document.getElementById('cal-body');
+  tbody.innerHTML='';
   const today=new Date();
 
-  // Build array of Mon-Fri cells for the month
-  // We'll render week rows, each with exactly 5 cells (Mon-Fri)
-  // Find the Monday of the week containing day 1
-  const firstMonday=new Date(calYear,calMonth,1-(((first.getDay()+6)%7)));
-  const lastDay=new Date(calYear,calMonth,dim);
-  const lastFriday=new Date(calYear,calMonth,dim+((5-((lastDay.getDay()+4)%7+1))%7 || 0));
+  const dim=new Date(calYear,calMonth+1,0).getDate();
+  // Build rows: each row is Mon-Fri of a calendar week
+  // Find Monday of the week containing day 1
+  const first=new Date(calYear,calMonth,1);
+  const firstDow=first.getDay(); // 0=Sun,1=Mon
+  const offsetToMon=(firstDow===0)?-6:(1-firstDow);
+  let rowStart=new Date(calYear,calMonth,1+offsetToMon);
 
-  let cur=new Date(firstMonday);
-  const cells=[];
-  while(cur<=lastDay || cells.length%5!==0){
-    const dow=cur.getDay();
-    if(dow>=1&&dow<=5){
-      const inMonth=cur.getMonth()===calMonth&&cur.getFullYear()===calYear;
-      cells.push({date:new Date(cur),inMonth});
-    }
-    cur=addDays(cur,1);
-    if(cells.length>200)break;
-  }
-  // pad to multiple of 5
-  while(cells.length%5!==0)cells.push(null);
-
-  cells.forEach((cell,i)=>{
-    const c=document.createElement('div');
-    if(!cell||!cell.inMonth){
-      c.className='ccell out';
-      grid.appendChild(c);
-      return;
-    }
-    c.className='ccell';
-    const k=dateKey(cell.date);
-    const dp=byDate[k]||[];
-    const isToday=today.getFullYear()===cell.date.getFullYear()&&today.getMonth()===cell.date.getMonth()&&today.getDate()===cell.date.getDate();
-    const numDiv=document.createElement('div');
-    numDiv.className='cnum'+(isToday?' today':dp.length?' active-day':'');
-    numDiv.textContent=cell.date.getDate();
-    c.appendChild(numDiv);
-    dp.forEach(p=>{
-      const pill=document.createElement('div');
-      pill.className='cpill';
-      pill.style.background=TCB[p.theme];
-      pill.style.color=TCT[p.theme];
-      pill.style.borderColor=TC[p.theme].replace('var(','').replace(')','');
-      pill.textContent=p.title;
-      pill.title=p.title;
-      pill.draggable=true;
-      pill.dataset.postId=p.id;
-      pill.addEventListener('dragstart',e=>{
-        dragPostId=p.id;
-        pill.classList.add('dragging');
-        e.dataTransfer.effectAllowed='move';
-      });
-      pill.addEventListener('dragend',()=>{
-        pill.classList.remove('dragging');
-        dragPostId=null;
-      });
-      pill.addEventListener('click',()=>showDetail(cell.date,dp));
-      c.appendChild(pill);
-    });
-    // Drop target
-    c.addEventListener('dragover',e=>{
-      e.preventDefault();
-      e.dataTransfer.dropEffect='move';
-      c.classList.add('drag-over');
-    });
-    c.addEventListener('dragleave',()=>c.classList.remove('drag-over'));
-    c.addEventListener('drop',e=>{
-      e.preventDefault();
-      c.classList.remove('drag-over');
-      if(dragPostId===null)return;
-      const p=posts.find(x=>x.id===dragPostId);
-      if(p){
-        p.currentDate=new Date(cell.date);
-        renderCal();
-        renderWeek();
+  while(rowStart<=new Date(calYear,calMonth,dim)){
+    const tr=document.createElement('tr');
+    for(let col=0;col<5;col++){
+      const d=addDays(rowStart,col);
+      const td=document.createElement('td');
+      const inMonth=d.getMonth()===calMonth&&d.getFullYear()===calYear;
+      if(!inMonth){
+        td.className='out';
+        tr.appendChild(td);
+        continue;
       }
-    });
-    grid.appendChild(c);
-  });
+      const k=dateKey(d);
+      const dp=byDate[k]||[];
+      const isToday=today.getFullYear()===d.getFullYear()&&today.getMonth()===d.getMonth()&&today.getDate()===d.getDate();
+      const numDiv=document.createElement('div');
+      numDiv.className='cnum'+(isToday?' today':dp.length?' active-day':'');
+      numDiv.textContent=d.getDate();
+      td.appendChild(numDiv);
+      dp.forEach(p=>{
+        const pill=document.createElement('div');
+        pill.className='cpill';
+        pill.style.background=TCB[p.theme];
+        pill.style.color=TCT[p.theme];
+        pill.textContent=p.title;
+        pill.title=p.title;
+        pill.draggable=true;
+        pill.dataset.postId=p.id;
+        pill.addEventListener('dragstart',e=>{
+          dragPostId=p.id;
+          setTimeout(()=>pill.classList.add('dragging'),0);
+          e.dataTransfer.effectAllowed='move';
+        });
+        pill.addEventListener('dragend',()=>{
+          pill.classList.remove('dragging');
+          dragPostId=null;
+        });
+        pill.addEventListener('click',()=>showDetail(d,dp));
+        td.appendChild(pill);
+      });
+      td.addEventListener('dragover',e=>{e.preventDefault();td.classList.add('drag-over');});
+      td.addEventListener('dragleave',()=>td.classList.remove('drag-over'));
+      td.addEventListener('drop',e=>{
+        e.preventDefault();
+        td.classList.remove('drag-over');
+        if(dragPostId===null)return;
+        const p=posts.find(x=>x.id===dragPostId);
+        if(p){p.currentDate=new Date(d);renderCal();renderWeek();}
+      });
+      tr.appendChild(td);
+    }
+    tbody.appendChild(tr);
+    rowStart=addDays(rowStart,7);
+  }
   document.getElementById('cal-detail').classList.remove('show');
   document.getElementById('cal-detail').innerHTML='';
 }
